@@ -25,3 +25,6 @@ uvicorn
 
 # Optional utilities
 nltk               # Text processing
+
+python-docx 
+PyPDF2
