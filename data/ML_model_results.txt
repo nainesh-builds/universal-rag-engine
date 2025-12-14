@@ -1,0 +1,38 @@
+--- Model Training, Evaluation, and Tuning Strategies ---
+
+1. Model Training:
+- Dataset size: 50,000 training samples, 10,000 validation samples
+- Features: 20 numeric features, 5 categorical features
+- Models used:
+  - Random Forest: 100 trees, max depth 10
+  - Gradient Boosting: 200 estimators, learning rate 0.05
+  - Logistic Regression: L2 regularization, C=1.0
+
+2. Evaluation Metrics:
+- Accuracy: measures overall correctness
+- Precision: 0.82 for positive class
+- Recall: 0.78 for positive class
+- F1-Score: 0.80 for positive class
+- ROC-AUC: 0.87
+
+3. Hyperparameter Tuning Strategies:
+- Grid Search:
+  - Random Forest: n_estimators = [50, 100, 200], max_depth = [5, 10, 15]
+  - Gradient Boosting: learning_rate = [0.01, 0.05, 0.1], n_estimators = [100, 200]
+- Random Search:
+  - Logistic Regression: C = uniform(0.01, 10)
+- Cross-Validation: 5-fold for all models
+- Early Stopping:
+  - Gradient Boosting: stop if validation loss does not improve for 10 rounds
+
+4. Observations:
+- Random Forest achieved highest validation accuracy of 0.84
+- Gradient Boosting achieved best ROC-AUC of 0.87
+- Logistic Regression was fastest to train but lower performance (accuracy 0.78)
+- Feature importance analysis:
+  - Top 3 features: 'age', 'income', 'credit_score'
+
+5. Notes:
+- Increasing n_estimators beyond 200 gave diminishing returns
+- Reducing learning rate below 0.01 slowed convergence without improving metrics
+- Cross-validation helps prevent overfitting on small datasets

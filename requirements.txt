@@ -1,0 +1,27 @@
+# Core Python libraries
+pandas
+tqdm
+python-dotenv
+numpy
+
+# File ingestion
+pdfplumber         # For reading PDFs
+python-docx        # For reading DOCX files
+
+# Web scraping
+requests
+beautifulsoup4
+
+# Machine Learning & Embeddings
+openai             # For LLM embeddings or text generation
+sentence-transformers  # HuggingFace embeddings models
+
+# Vector search / retrieval
+faiss-cpu          # Vector similarity search
+
+# Backend (for future API)
+fastapi
+uvicorn
+
+# Optional utilities
+nltk               # Text processing
