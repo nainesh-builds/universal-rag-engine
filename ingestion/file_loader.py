@@ -2,7 +2,7 @@
 import os
 
 # List supported file types (expandable later)
-SUPPORTED_EXTENSIONS = [".txt"]  # later add ".pdf", ".docx"
+SUPPORTED_EXTENSIONS = [".txt",".pdf", ".docx"]  # later add ".pdf", ".docx"
 
 def load_file(folder_path):
     """
